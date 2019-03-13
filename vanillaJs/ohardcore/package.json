@@ -1,7 +1,6 @@
 {
-  "name": "vanllia_test_01",
+  "name": "ohardcore",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -14,11 +13,14 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
+    "babel-preset-env": "^1.5.0",
     "webpack": "^4.29.6",
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "description": ""
 }

@@ -5,6 +5,7 @@ export class Profile {
     }
 
     hello(){
-        return 'Hello, ${this.name}(${this.email})'
+        console.log('Hello ',this.name, this.email)
+        
     }
 }
