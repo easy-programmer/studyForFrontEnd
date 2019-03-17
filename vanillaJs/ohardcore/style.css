@@ -23,6 +23,12 @@ body{
     grid-gap: 5px;
 }
 
+.imgs.toggle{
+    display: table-cell;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    grid-gap: 5px;
+}
+
 /*Fad in animation*/
 @keyframes fadeIn{
     to {

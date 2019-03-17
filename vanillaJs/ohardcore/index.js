@@ -50,3 +50,13 @@ function imgClick(e){
     current.src = e.target.src;
     e.target.style.opacity = opacity;
 }
+
+document.addEventListener('click', (e) =>{
+    if(!event.target.matches('.btn_change')) return;
+
+    event.preventDefault();
+
+    
+    document.querySelector('.imgs').classList.toggle('toggle');
+    //document.querySelector('.imgs').style.display = 'table';
+}, false);
