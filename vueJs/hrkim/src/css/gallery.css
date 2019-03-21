@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background: rgb(228, 225, 225);
+    
+}
+
+body:after {
+    background-size: 100%;
+    /*background-image: url("../img/watercolor.jpg");*/
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    border: #fff solid 3px;
+    background: #fff;
+}
+
+.main-img img,
+.imgs img {
+    width: 100%;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+.button {
+    margin: 10px 0;
+    padding: 0 4px 0 0;
+    text-align: right;
+    
+}
+
+.btn {
+    border-radius: 4px;
+    background-color:lightslategray;
+    color: #fff;
+}
