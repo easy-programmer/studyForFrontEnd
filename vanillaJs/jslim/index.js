@@ -8,6 +8,11 @@ const imgs = document.querySelectorAll('.imgs img');
 const texts = document.querySelectorAll('#text-list li');
 const opacity = 0.4;
 
+//DOM 생성 후 갤러리 클릭 Event Load
+document.addEventListener('DOMContentLoaded', () => {
+    clickGallery();
+});
+
 // Set first img opacity
 imgs[0].style.opacity.opacity;
 
@@ -39,7 +44,7 @@ function imgClick(e) {
 function textClick(e) {
     
     // Change Current image to src of clicked imgage
-    current.src = e.target.nextElementSibling.value;
+    current.src = e.target.dataset.hiddenval;
 
     // Add fade in class
     current.classList.add('fade-in');
@@ -51,14 +56,14 @@ function textClick(e) {
     //e.target.style.opacity = opacity;
 }
 
-function clickGallery(e) {
+function clickGallery() {
     
     imgList.style.display =  "";
     textList.style.display =  "none";
 
 }
 
-function clickList(e) {
+function clickList() {
     
     imgList.style.display =  "none";
     textList.style.display =  "";
