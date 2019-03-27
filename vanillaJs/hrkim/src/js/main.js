@@ -2,6 +2,9 @@
 // const imgs = document.querySelectorAll('.imgs img');
 // const opacity = 0.4;
 
+document.getElementById("imgsView").style.display = 'none';
+document.getElementById("imgsTable").style.display = 'block';
+
 const [current, imgs, opacity] = [
     document.querySelector('#current'),
     document.querySelectorAll('.imgs img'),
@@ -36,8 +39,12 @@ function imgClick(e) {
 buttons.forEach(button => button.addEventListener('click', function() {buttonClick(button.id)}));
 function buttonClick(id) {
     if ( id === 'gridButton' ) {
-        alert("Click Grid !!!");
+        // alert("Click Grid !!!");
+        document.getElementById("imgsView").style.display = 'block';
+        document.getElementById("imgsTable").style.display = 'none';
     } else {
-        alert("Click List !!!");
+        // alert("Click List !!!");
+        document.getElementById("imgsView").style.display = 'none';
+        document.getElementById("imgsTable").style.display = 'block';
     }
 }
