@@ -1,16 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
- 
-const title = 'React Project is working?!';
- 
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+/*
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+
+
+//const title = 'React Project is working?!';
+let text = '';
+const rawResponse = axios.get('https://api.github.com/users/maecapozzi')
+        .then(response => text = response.data.name);
+
+
 ReactDOM.render(
-  <div>{title}</div>,
+  <div>{text}</div>,
   document.getElementById('root')
 );
-
-if (module.hot) {
-    module.hot.accept(() => {
-        const nextRootReducer = require("../reducers").default;
-        store.replaceReducer(nextRootReducer);
-    });
-}
+*/
