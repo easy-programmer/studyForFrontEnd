@@ -1,0 +1,36 @@
+{
+    "imgList" : [
+        { 
+            "id": "img1",
+            "imgUrl": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img2",
+            "imgUrl": "https://images.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img3",
+            "imgUrl": "https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img4",
+            "imgUrl": "https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img5",
+            "imgUrl": "https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img6",
+            "imgUrl": "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img7",
+            "imgUrl": "https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        },
+        { 
+            "id": "img8",
+            "imgUrl": "https://images.pexels.com/photos/1150988/pexels-photo-1150988.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        }    
+    ]
+}
