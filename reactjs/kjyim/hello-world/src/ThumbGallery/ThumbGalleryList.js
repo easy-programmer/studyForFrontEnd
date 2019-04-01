@@ -1,17 +1,30 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
+import ThumbGalleryInfo from './ThumbGalleryInfo';
 
 
-const ThumbGalleryList = (props) => {
-    
-    return (
-        <Fragment>
-            {
-                props.list.map((img, index) => (
-                    <img src={img.imgUrl} id={img.id} />
-                ))
-            }
-        </Fragment>
-    );
+class ThumbGalleryList extends Component {
+    static defaultProps = {
+        data: []
+    }
+    render() {
+        const { data, imgClick } = this.props;
+        
+        const list = data.map(
+            info => (
+                <ThumbGalleryInfo
+                    imgClick={imgClick}
+                    info={info}
+                    key={info.id}
+                />
+            )
+        );
+          
+        return (
+            <Fragment>
+                {list}
+            </Fragment>
+        );
+    }
    
 }
 

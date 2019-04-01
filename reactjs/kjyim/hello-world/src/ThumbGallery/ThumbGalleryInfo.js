@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
 
-class Thumbnail extends Component {
-    state = {
-        imgUrl: ''
-    }
-    imageClick = (e) => {
-        this.setState({
-            imgUrl: e.target.src 
-        })
+class ThumbGalleryInfo extends Component {
+    
+    handleClick = () => {
+        const { info, imgClick } = this.props;
+        console.log(info);
+        imgClick(info.id);
     }
     
     render() {
@@ -16,10 +14,11 @@ class Thumbnail extends Component {
         
         return (
             <Fragment>
-                <img src={imgUrl} id={id} onClick={this.imageClick} />
+                <img src={imgUrl} id={id} onClick={this.handleClick} alt='' />
             </Fragment>
         );
     }
 }
 
-export default Thumbnail;
+
+export default ThumbGalleryInfo;

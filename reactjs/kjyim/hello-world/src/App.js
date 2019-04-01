@@ -4,13 +4,12 @@ import axios from 'axios';
 import './ThumbGallery/ThumbGallery.css';
 
 class App extends Component {
-  id = 0;
+
   constructor(props){
     super(props);
 
     this.state = {
       id: 'img1',
-      currenImgUrl: '',
       imgList: [],
       error: false
     }
@@ -36,11 +35,22 @@ class App extends Component {
         this.setState({
             imgList: data.data.imgList
         });
-        
+        console.log(this.state.imgList);
     }).catch(error => {
         console.log(error);
     });
       
+  }
+  handleClick = (id) => {
+    this.setState({
+      id: id
+    });
+    console.log(id);
+  }
+
+  changeList = () => {
+    let obj = document.getElementsByClassName('imgs');
+    obj[0].className = 'list';
   }
 
   render() {
@@ -53,30 +63,21 @@ class App extends Component {
     return (
         <div className="container">
              <div className="main-img">
-                 {
-                  this.state.currenImgUrl === ''? (
-                    <ThumbGalleryList list = {
-                      this.state.imgList.filter(imgInfo => (
-                        imgInfo.id === this.state.id
-                      ))
-                    }/>
-                  ) : (
-                    <span>LOADING...</span>
-                  )
-                }
+                <ThumbGalleryList data = {
+                  this.state.imgList.filter(info => (
+                    info.id === this.state.id
+                  ))}
+                />
             </div>
             <div className="imgs">
-              {
-                  this.state.currenImgUrl === ''? (
-                    <ThumbGalleryList list = {
-                      this.state.imgList
-                    }/>
-                  ) : (
-                    <span>LOADING...</span>
-                  )
-                }  
-             </div>
+              <ThumbGalleryList
+                data = { this.state.imgList }
+                imgClick = {this.handleClick}
+              />
+            </div>
+            <button onClick={this.changeList} >list</button>
          </div>
+         
     );
   }
 }
