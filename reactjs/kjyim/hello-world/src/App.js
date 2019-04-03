@@ -29,13 +29,13 @@ class App extends Component {
 
   // 데이터 가져오기
   getImgUrlList = () => {
-    const apiUrl = 'dummy/ThumbGalleryDb.json';
+    const apiUrl = 'http://localhost:3001/imgList';
 
-    axios.get(apiUrl).then(data => {
+    axios.get(apiUrl).then(resp => {
+        
         this.setState({
-            imgList: data.data.imgList
+            imgList: resp.data
         });
-        console.log(this.state.imgList);
     }).catch(error => {
         console.log(error);
     });
