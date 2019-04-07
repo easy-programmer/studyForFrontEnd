@@ -21,7 +21,7 @@ header {
 }
 
 .container {
-    max-width: 760px;
+    max-width: 800px;
     margin: auto;
     border: #fff solid 3px;
     background: #fff;
@@ -37,6 +37,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
 }
+
 
 /* Fade in animation */
 @keyframes fadeIn {
@@ -61,4 +62,25 @@ header {
     border-radius: 4px;
     background-color:lightslategray;
     color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+table img {
+    height: 100px;
+    width: 150px;
 }
