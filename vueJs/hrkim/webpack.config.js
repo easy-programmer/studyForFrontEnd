@@ -5,7 +5,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: ['@babel/polyfill','./src/main.js'/*, './src/js/entry.js', './src/sass/main.scss', './src/css/gallery.css'*/],
+    entry: ['@babel/polyfill','./src/main.js', './src/gallery.js'/*, './src/js/entry.js', './src/sass/main.scss', './src/css/gallery.css'*/],
     // 컴파일 + 번들링된 js 파일이 저장될 경로와 이름 지정
     output: {
         path: path.resolve(__dirname, 'dist/js'),
@@ -18,7 +18,7 @@ module.exports = {
     plugins: [
         // 컴파일 + 번들링 CSS 파일이 저장될 경로와 이름 지정
         new MiniCssExtractPlugin( { filename: 'css/style.css' }),
-        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new HtmlWebpackPlugin({ template: './src/gallery.html' }),
         new VueLoaderPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
