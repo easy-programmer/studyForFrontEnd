@@ -27,18 +27,10 @@ export default {
         return {
             //opacity: 0.6,
             title: 'Movie',
-            images: [
-                // {id: 1, title: '봄날은 간다', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/oEN19w8TEfPkPvjSlm8DYrVUyVQ.jpg'},
-                // {id: 2, title: '파이트클럽', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/kabpExFv9JLp778w9ZtCtZnWH9N.jpg'},
-                // {id: 3, title: '캡틴마블', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/jWd9tWuoDPN561r7vp4ekngEe7f.jpg'},
-                // {id: 4, title: '프라이멀 피어', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/qJf2TzE8nRTFbFMPJNW6c8mI0KU.jpg'},
-                // {id: 5, title: '그린치', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/clJYtRBUhDtvKhPk2HNfXouviKF.jpg'},
-                // {id: 6, title: '버드박스', src: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/dB7jNL5I3hb7b1zsGD5OEoSl2BQ.jpg'}
-            ]
+            images: []
         }
     },
     created() {
-        alert("created");
         this.$http.get('http://localhost:3000/movies').then(response => {
                 this.images = response.data
             })
